@@ -30,25 +30,20 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
         <a class="navbar-brand" href="/">SITU</a>
       </nav>
-    <div class="container d-flex justify-content-center align-items-center">
-        <div class="card"id="login">
-            <h3 class="pb-5 text-center">Login as teacher</h3>
+    <div class="tabcontent" id="student">
+        <h3>Join a lession</h3>
+        <form>
+            <div class="form-group">
+                <label for="studentname">Enter your name</label>
+                <input type="text" name="studentname" id="studentname" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="code">Enter CODE</label>
+                <input type="text" class="form-control" name="code" id="classcode" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">Join</button>
+        </form>
     
-            <button class="btn btn-primary px-5 mb-4" id="loginWithGoogle"><i class="fab fa-google mr-2"></i>Login with Google</button>
-            <form class="d-flex flex-column" id="loginForm">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
-                </div>
-                <p class="text-danger" id="errorMsg"></p>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-            <p class="m-3">You don't have a teacher account? <a href="./register.html">Sign up</a></p>
-        </div>
     </div>
 
     <!-- Optional JavaScript -->

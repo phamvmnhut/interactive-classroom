@@ -56,12 +56,6 @@ h5 {
     height: 73.5vh;
 }
 
-@media only screen and (max-width: 1000px){
-    .rectangle .board{
-        width: 720px;
-        height: 405px;
-    }
-}
 
 @media only screen and (max-width: 900px){
     .rectangle .board{

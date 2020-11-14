@@ -18,7 +18,7 @@ function openPage(pageName) {
 
 // Get the element with id="defaultOpen" and click on it
 $(document).ready(function () {
-    $("#student-tab").click();
+    $("#login-tab").click();
 });
 
 $("#signup").click(() => {

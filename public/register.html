@@ -15,36 +15,41 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
-        <a class="navbar-brand" href="/">SITU</a>
-      </nav>
+        <a class="navbar-brand" href="/">SUTI</a>
+    </nav>
     <div class="container">
         <div class="card">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="student-tab" data-toggle="tab" href="#student" role="tab"
-                        aria-controls="student" aria-selected="true" onclick="openPage('student');">Student</a>
+                    <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                        aria-controls="login" aria-selected="true" onclick="openPage('login');">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="teacher-tab" data-toggle="tab" href="#teacher" role="tab"
-                        aria-controls="teacher" aria-selected="false" onclick="openPage('teacher');">Teacher</a>
+                    <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab"
+                        aria-controls="signup" aria-selected="false" onclick="openPage('signup');">Sign up</a>
                 </li>
             </ul>
-            <div class="tabcontent" id="student">
-                <h3>Join a lession</h3>
-                <form>
+            <div class="tabcontent" id="login">
+                <h3 class="pb-5 text-center">Login as teacher</h3>
+
+                <button class="btn btn-primary px-5 mb-4" id="loginWithGoogle"><em class="fab fa-google mr-2"></em>Login
+                    with
+                    Google</button>
+                <form class="d-flex flex-column" id="loginForm">
                     <div class="form-group">
-                        <label for="studentname">Enter your name</label>
-                        <input type="text" name="studentname" id="studentname" class="form-control" placeholder="">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="code">Enter CODE</label>
-                        <input type="text" class="form-control" name="code" id="classcode" placeholder="">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
                     </div>
-                    <button type="submit" class="btn btn-primary">Join</button>
+                    <p class="text-danger" id="errorMsg"></p>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
                 </form>
-           
+                <p class="m-3">Don't have a teacher account? <a href="" onclick="openPage('signup');">Sign up</a></p>
             </div>
-            <div class="tabcontent" id="teacher">
+            <div class="tabcontent" id="signup">
                 <h3>Sign up for FREE</h3>
                 <form>
                     <div class="form-group">
