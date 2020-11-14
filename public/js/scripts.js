@@ -1,13 +1,13 @@
 function openPage(pageName) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = $(".tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
     // Remove the background color of all tablinks/buttons
-    tablinks = document.getElementsByClassName("tablink");
+    tablinks = $(".tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
     }
@@ -21,8 +21,9 @@ $(document).ready(function () {
     $("#student-tab").click();
 });
 
-$("#login").click(() => {
-    $("#teacher-tab").click();
+
+$("#teacherlogin").click(() => {
+    $("#login-tab").click();
 });
 
 $("#signup").click(() => {
