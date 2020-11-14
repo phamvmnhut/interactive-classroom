@@ -24,7 +24,12 @@
 
 .rectangle {
   border-style: solid;
-  padding: 2rem;
+  padding: 0 2rem 3rem 2rem;
+  margin-top: 0.5rem;
+}
+
+h5{
+    margin-top: 1rem;
 }
 
 .col-sm{
@@ -40,4 +45,17 @@
 
 .row{
     max-width: 10rem;
+}
+
+.item-element{
+    font-weight: 500;
+    justify-content: center;
+}
+
+.container{
+    height: 85vh;
+}
+
+.rectangle .board{
+    height: 73.5vh;
 }

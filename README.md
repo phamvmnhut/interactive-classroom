@@ -4,7 +4,6 @@ This repository contains source code of Interactive-classroom application in MVP
 
 ## Our Website
 
-
 ## Quick start
 
 To run website locally, you'll need to:

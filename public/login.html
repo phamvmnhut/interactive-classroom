@@ -16,15 +16,18 @@
 <body>
     <div class="tabcontent card container" id="login">
         <h3>Login as teacher</h3>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
-        </div>
-        <button type="button" class="btn btn-primary">Sign in</button>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+        <p class="m-3">You don't have a teacher account? <a href="./register.html">Log in</a></p>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
