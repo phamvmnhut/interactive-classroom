@@ -53,7 +53,7 @@ auth.onAuthStateChanged(user => {
         form.hidden = true;
         loggedIn.hidden = false;
         userInfo.hidden = true;
-        window.location = 'login.html';
+        window.location = 'home.html';
         console.log(user);
     } else {
         // User is signed out.

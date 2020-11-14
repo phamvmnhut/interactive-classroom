@@ -22,8 +22,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
-    <script src="./js/firebaseintit.js"></script>
-    <script src="./js/auth.js"></script>
+    <script src="./js/firebaseintit.js" defer></script>
+    <script src="./js/auth.js" defer></script>
 </head>
 
 <body>
@@ -34,8 +34,8 @@
         <div class="card"id="login">
             <h3 class="pb-5 text-center">Login as teacher</h3>
     
-            <button class="btn btn-primary px-5 mb-4"><i class="fab fa-google mr-2"></i>Login with Google</button>
-            <form class="d-flex flex-column">
+            <button class="btn btn-primary px-5 mb-4" id="loginWithGoogle"><i class="fab fa-google mr-2"></i>Login with Google</button>
+            <form class="d-flex flex-column" id="loginForm">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
@@ -44,6 +44,7 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
                 </div>
+                <p class="text-danger" id="errorMsg"></p>
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
             <p class="m-3">You don't have a teacher account? <a href="./register.html">Sign up</a></p>
