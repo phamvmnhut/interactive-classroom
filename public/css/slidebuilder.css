@@ -1,61 +1,86 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.navbar{
-    background-color: #54C7EF;
+.navbar {
+    background-color: #54c7ef;
     display: flex;
     justify-content: center;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: white;
     font-size: 2rem;
     font-weight: 700;
     justify-content: center;
 }
 
-.main{
+.main {
     display: flex;
     padding: 1rem;
 }
 
 .rectangle {
-  border-style: solid;
-  padding: 0 2rem 3rem 2rem;
-  margin-top: 0.5rem;
+    border-style: solid;
+    padding: 0 2rem 3rem 2rem;
+    margin-top: 0.5rem;
 }
 
-h5{
+h5 {
     margin-top: 1rem;
 }
 
-.col-sm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 10rem;
+.col-sm-2 {
     text-align: center;
     margin-right: 1rem;
     margin-left: 1rem;
-    height: 100%;
 }
 
-.row{
+.row {
     max-width: 10rem;
 }
 
-.item-element{
+.item-element {
+    min-width: 100px;
     font-weight: 500;
     justify-content: center;
 }
 
-.container{
+.container {
     height: 85vh;
 }
 
-.rectangle .board{
+.rectangle .board {
     height: 73.5vh;
 }
+
+@media only screen and (max-width: 1000px){
+    .rectangle .board{
+        width: 720px;
+        height: 405px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .rectangle .board{
+        width: 480px;
+        height: 270px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .rectangle .board{
+        width: 320px;
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .rectangle .board{
+        width: 160px;
+        height: 90px;
+    }
+}
+
