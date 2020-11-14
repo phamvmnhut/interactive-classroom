@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Slide Builder</title>
+    <title>Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,33 +10,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/slidebuilder.css">
+    <link rel="stylesheet" href="/public/css/login.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <a class="navbar-brand" href="#">SUTI</a>
-    </nav>
-    <div class="main">
-        <div class="col-sm rectangle">
-            <h5>Elements</h5>
-            <div class="row rectangle">
-                One of three columns
-            </div>
-            <div class="row">
-                One of three columns
-            </div>
+    <div class="tabcontent card container" id="login">
+        <h3>Login as teacher</h3>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
         </div>
-        <div class="col-6">
-            <div class="row-l">
-                One of 2 columns
-            </div>
-            <div class="row-l">
-                One of 2 columns
-            </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
         </div>
+        <button type="button" class="btn btn-primary">Sign in</button>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -48,7 +37,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
