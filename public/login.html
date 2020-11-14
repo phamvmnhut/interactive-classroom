@@ -10,25 +10,46 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/login.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+    <script src="./js/firebaseintit.js"></script>
+    <script src="./js/auth.js"></script>
 </head>
 
 <body>
-    <div class="tabcontent card container" id="login">
-        <h3>Login as teacher</h3>
-        <form>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
-            </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-        </form>
-        <p class="m-3">You don't have a teacher account? <a href="./register.html">Log in</a></p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+        <a class="navbar-brand" href="/">SITU</a>
+      </nav>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card"id="login">
+            <h3 class="pb-5 text-center">Login as teacher</h3>
+    
+            <button class="btn btn-primary px-5 mb-4"><i class="fab fa-google mr-2"></i>Login with Google</button>
+            <form class="d-flex flex-column">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="emailLogin" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" id="passwordLogin" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <p class="m-3">You don't have a teacher account? <a href="./register.html">Sign up</a></p>
+        </div>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
