@@ -45,7 +45,15 @@ npm install -g firebase-tools
 ```bash
 firebase serve
 ```
-
+## Folder Structure
+- functions/
+  - routes/
+  - views/
+  - index.js
+  - serviceAccountKey.json
+ - public/
+ - README.md
+ 
 ## Libraries
 
 -   [Bootstrap v4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
