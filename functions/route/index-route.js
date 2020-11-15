@@ -8,12 +8,8 @@ admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     databaseURL: 'https://interactive-classroom-594c6.firebaseio.com'
 });
-
+// global cookie to store data of current user
 let sessionCookie = '';
-function isEmail(email) {
-    const regx = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regx.test(email);
-}
 router.get('/login', (req, res) => {
    if(sessionCookie){
        return res.redirect('/dashboard');
