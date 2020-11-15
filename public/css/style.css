@@ -1,0 +1,314 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+@font-face {
+  font-family: Icons;
+  src: url(../fonts/Icons.woff2);
+  src: url(../fonts/Icons.woff2) format('embedded-opentype'), url(../fonts/Icons.woff2) format('woff2'), url(../fonts/Icons.woff) format('woff'), url(../fonts/Icons.ttf) format('truetype'), url(../fonts/Icons.woff2) format('svg');
+  font-weight: 400;
+  font-style: normal
+}
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  --success-color: #45c02d;
+  --predominant-color: #FFDE59;
+  --text-color: #000;
+  --button-color: #90B045;
+}
+
+:focus {
+  outline: 0
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+html {
+  font-weight: 400;
+  background:var(--predominant-color);
+}
+html, input {
+  font-family: Lato, sans-serif;
+  color: var(--text-color);
+  font-size: 16px
+}
+.app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation-duration: 1s;
+  animation-name: fadein;
+  opacity: 0;
+  animation-fill-mode: forwards
+}
+h2 {
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.904);
+  margin-bottom: 50px;
+  opacity: 0;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-fill-mode: forwards
+}
+h2 p {
+  margin: 0 0 5px 0
+}
+
+h2 p span {
+  position: relative
+}
+
+h2 p span:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, .4);
+  margin-top: 2px
+}
+.header {
+  flex: 0 0 120px;
+  margin-bottom: 50px;
+  width: 100%;
+  z-index: 10;
+  position: relative
+}
+
+.header .logo {
+  width: 145px;
+  height: 79px;
+  background-image: url(../img/main-logo.png);
+  background-size: 145px 79px;
+  background-color: rgba(255, 255, 255, 0);
+  display: block;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 45px;
+  z-index: 10
+}
+
+.content {
+  width: 500px;
+  position: relative;
+  flex: 0 0;
+  text-align: center;
+  z-index: 10;
+  padding-bottom: 50px;
+}
+.content .controls {
+  min-height: 54px
+}
+.content .input-box {
+  height: 54px;
+  opacity: 0;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-fill-mode: forwards
+}
+.content .input-box>form>* {
+  display: inline-block;
+  vertical-align: top
+}
+.content .input-box>form {
+  display: flex
+}
+
+.content .input-box input[type=email] {
+  background: 0 0;
+  border-radius: 3px;
+  flex: 1 1;
+  height: 54px;
+  padding: 0 20px;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  margin-right: 10px
+}
+.content .input-box button {
+  background: var(--button-color);
+  color: #fff;
+  flex: 0 0 80px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  height: 54px;
+  padding: 0 42px 0 25px;
+  border: 0;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative
+}
+
+.content .input-box button:after {
+  font-family: Icons;
+  content: '\ea02';
+  font-size: 16px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%)
+}
+.content .input-box button:active {
+  background: #759136
+}
+.content .input-box input[type=email]::placeholder {
+  color: rgb(0, 0, 0, 0.6);
+}
+.content .input-box input[type=email]:focus {
+  border: 1px rgba(0, 0, 0, 0.8) solid
+}
+
+.content .input-box button.button--loading {
+  font-size: 0
+}
+
+.content .input-box button.button--loading:after {
+  display: none
+}
+
+.content .input-box button.button--loading:before {
+  content: '';
+  background-image: url(../img/point-loader.svg?svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px 6px;
+  position: absolute;
+  width: 22px;
+  height: 6px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.content .success-box {
+  text-align: left;
+  position: relative;
+  padding-left: 55px;
+  color: var(--success-color);
+  width: 80%;
+  display: none;
+  margin: 0 auto
+}
+.content .success-box:before {
+  font-family: Icons;
+  content: '\ea05';
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3)
+}
+
+.content .success-box .title {
+  font-weight: 700;
+  margin-bottom: 5px
+}
+.content .success-box .subtitle {
+  font-size: 13px;
+  opacity: .8
+}
+
+.content .error-box {
+  text-align: left;
+  font-size: 13px;
+  margin: 10px 5px;
+
+  padding: 2px;
+  color: #000000;
+  font-weight: 700;
+  position: relative;
+  padding-left: 20px;
+  display: none;
+}
+
+.content .error-box:before {
+  content: '\ea06';
+  left: 0;
+  top: 0;
+  font-family: Icons;
+  font-size: 14px;
+  position: absolute
+}
+
+.content .facebook-link {
+  margin-top: 50px;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .4);
+  font-size: 14px;
+  position: relative;
+  text-align: left;
+  padding-left: 22px;
+  opacity: 0;
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-fill-mode: forwards
+}
+
+.content .facebook-link:hover {
+  color: var(--text-color);
+}
+.content .facebook-link:before {
+  font-family: Icons;
+  content: '\ea07';
+  font-size: 16px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%)
+}
+@media only screen and (max-width:600px) {
+  .header {
+    margin-bottom: 20px
+  }
+  .content {
+    width: 100%;
+    padding: 20px
+  }
+  h1 {
+    font-size: 42px
+  }
+  h2 {
+    font-size: 16px
+  }
+  .header .logo {
+    transform: translate(-50%, -50%);
+    left: 50%
+  }
+  .success-box {
+    width: 100%
+  }
+}

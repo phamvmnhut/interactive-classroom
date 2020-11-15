@@ -1,80 +1,109 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+ padding: 0;
+ margin: 0;
 }
-
-.navbar {
-    background-color: #54c7ef;
-    display: flex;
-    justify-content: center;
+.slide-manage {
+ background-color: #54C7EF;
 }
-
+#sidebar {
+ color: #000;
+}
 .navbar-brand {
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    justify-content: center;
+ color: #1887DC !important;
+ font-weight: bold;
+}
+.nav-link{
+ color: #1887dc !important;
+ font-weight: 500;
+}
+.slide-avt {
+ padding-top: 30px;
+ padding-bottom: 30px;
+ margin-top: 10px;
+ margin-left: 10px;
+ display: flex;
+ justify-content: center;
+ text-align: center;
 }
 
-.main {
-    display: flex;
-    padding: 1rem;
+#buttons {
+ text-align: center;
 }
 
-.rectangle {
-    border-style: solid;
-    padding: 0 2rem 3rem 2rem;
-    margin-top: 0.5rem;
+#buttons label {
+ display: block;
+ font-size: 1.4em;
 }
 
-h5 {
-    margin-top: 1rem;
+#buttons input {
+ padding: .5em;
+ margin-bottom: 12px;
 }
 
-.col-sm-2 {
-    text-align: center;
-    margin-right: 1rem;
-    margin-left: 1rem;
+#sidebar-elements {
+ display: flex;
+ flex-direction: column;
 }
 
-.row {
-    max-width: 10rem;
+#sidebar-elements h3 {
+ font-size: 1.3em;
+ color: #e8ecf0;
+ background-color: #448782;
+ padding: .4em;
+ margin: 0 5px;
+}
+.wrapper {
+ margin-top: 4rem;
+}
+.ui-elements {
+ list-style-type: none;
+ margin: 0;
+ padding-left: 10px;
+ padding-bottom: 10px;
 }
 
-.item-element {
-    min-width: 100px;
-    font-weight: 500;
-    justify-content: center;
+.ui-elements li {
+ background-repeat: no-repeat;
+ background-position: 0 .5em;
+ padding: .5em 0 .5em 30px;
 }
 
-.container {
-    height: 85vh;
+#ui-name {
+ background-image: url('../img/entry.png');
 }
 
-.rectangle .board {
-    height: 73.5vh;
+#ui-entry {
+ background-image: url('../img/entry.png');
 }
 
-
-@media only screen and (max-width: 900px){
-    .rectangle .board{
-        width: 480px;
-        height: 270px;
-    }
+#ui-text {
+ background-image: url('../img/textview.png');
 }
 
-@media only screen and (max-width: 768px){
-    .rectangle .board{
-        width: 320px;
-        height: 180px;
-    }
+#ui-button {
+ background-image: url('../img/button.png');
 }
 
-@media only screen and (max-width: 500px){
-    .rectangle .board{
-        width: 160px;
-        height: 90px;
-    }
+#ui-choise {
+ background-image: url('../img/checkbutton.png');
 }
 
+#ui-calendar {
+ background-image: url('../img/calendar.png');
+}
+
+#ui-combo {
+ background-image: url('../img/combo.png');
+}
+
+#ui-radio {
+ background-image: url('../img/radio.png');
+}
+
+#ui-separator {
+ background-image: url('../img/separator.png');
+}
+
+#ui-infobox {
+ background-image: url('../img/infobox.png');
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+ <title>Join</title>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+ <link rel="stylesheet" href="/css/login.css">
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+  <a class="navbar-brand" href="/">SUTI</a>
+ </nav>
+ <div class="container d-flex justify-content-center align-items-center">
+  <div class="card" id="login">
+   <h3 class="pb-5 text-center">Join Class</h3>
+   <form class="d-flex flex-column" id="joinForm">
+    <div class="form-group">
+     <label for="fullname">Enter your name</label>
+     <input type="text" name="fullname" id="fullname" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+     <label for="classCode">Enter class's CODE</label>
+     <input type="text" class="form-control" name="classCode" id="classCode" placeholder="">
+    </div>
+    <p class="text-danger" id="errorMsg"></p>
+    <button type="submit" class="btn btn-primary">JOIN!</button>
+   </form>
+   <p class="text-center mt-3 mb-0">You don't have a CODE?</p>
+   <p class="text-center m-0">Ask your teacher for help</p>
+  </div>
+ </div>
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <script>
+  var firebaseConfig = {
+   apiKey: 'AIzaSyAtoBiPNSjMraHogt9EJNoi2-F4CetzFXE',
+   authDomain: 'interactive-classroom-594c6.firebaseapp.com',
+   databaseURL: 'https://interactive-classroom-594c6.firebaseio.com',
+   projectId: 'interactive-classroom-594c6',
+   storageBucket: 'interactive-classroom-594c6.appspot.com',
+   messagingSenderId: '685724894311',
+   appId: '1:685724894311:web:6012b9318781e1a68580c2',
+   measurementId: 'G-H6WCMZSY5K'
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const joinForm = document.querySelector('#joinForm');
+  const errorMsg = document.querySelector('#errorMsg');
+  joinForm
+   .addEventListener('submit', e => {
+    e.preventDefault();
+    const email = document.querySelector('#fullname').value;
+    const password = document.querySelector('#classCode').value;
+
+   });
+
+ </script>
+</body>
+
+</html>

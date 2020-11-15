@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+        <a class="navbar-brand" href="/">SUTI</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <div class="tabcontent" id="teacher">
+                <h3>Sign up for FREE</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">Full name</label>
+                        <input type="text" name="fullname" id="fullname" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="signup">Sign up</button>
+                </form>
+                <p class="m-1">Already have an account? <a href="/login" id="teacherlogin">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: 'AIzaSyAtoBiPNSjMraHogt9EJNoi2-F4CetzFXE',
+            authDomain: 'interactive-classroom-594c6.firebaseapp.com',
+            databaseURL: 'https://interactive-classroom-594c6.firebaseio.com',
+            projectId: 'interactive-classroom-594c6',
+            storageBucket: 'interactive-classroom-594c6.appspot.com',
+            messagingSenderId: '685724894311',
+            appId: '1:685724894311:web:6012b9318781e1a68580c2',
+            measurementId: 'G-H6WCMZSY5K'
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE)
+
+
+        document
+            .getElementById("signup")
+            .addEventListener("submit", (event) => {
+                event.preventDefault();
+                const login = event.target.login.value;
+                const password = event.target.password.value;
+
+                firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(login, password)
+                    .then(({ user }) => {
+                        return user.getIdToken().then((idToken) => {
+                            return fetch("/sessionLogin", {
+                                method: "POST",
+                                headers: {
+                                    Accept: "application/json",
+                                    "Content-Type": "application/json",
+                                    "CSRF-Token": Cookies.get("XSRF-TOKEN"),
+                                },
+                                body: JSON.stringify({ idToken }),
+                            });
+                        });
+                    })
+                    .then(() => {
+                        return firebase.auth().signOut();
+                    })
+                    .then(() => {
+                        window.location.assign("/profile");
+                    });
+                return false;
+            });
+    </script>
+</body>
+
+</html>

@@ -1,60 +1,80 @@
-* {
-    font: "Roboto", sans-serif;
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ 
 }
-
-.header {
-    font: "Roboto", sans-serif;
-    font-weight: 900;
-    color: #1887DC;
+a:hover{
+ text-decoration: none;
 }
-
-.section-1 h6 {
-    color: #1887dc !important;
-    font-size: large;
-    font-weight: 700;
-    margin-bottom: 20px;
+body{
+ font-family: 'Roboto', sans-serif;
+ height: 100vh;
+}
+main{
+ height: 100%
 }
 
 .navbar-brand {
-    color: #1887DC !important;
-    font-weight: bold;
+ color: #1887DC !important;
+ font-weight: bold;
 }
-
 .nav-link{
-    color: #1887dc !important;
-    font-weight: 500;
+ color: #1887dc !important;
+ font-weight: 500;
 }
-
-
-.input-group {
-    width: 250px;
-    border: #F2BF1E;
-    
+.title{
+ font-weight: 900;
+ color: #1887DC;
 }
-
+.tag{
+ font-weight: 700;
+ margin-bottom: 20px;
+ color: #1887dc ;
+}
+.subtitle{
+ padding: 5rem 0 3rem 0;
+}
 .btn {
-    background-color: #FFD245;
+ margin: 0 0.5rem;
+ background-color: #FFD245;
+ width: 150px;
+ font-weight: 600;
 }
-
 .btn:hover {
-    background-color: #F2BF1E;
+ background-color: #F2BF1E;
 }
-
-#sign-up {
-    width: 150px;
-    font-weight: 600;
+#main-content{
+ width: 100%;
+ height: 100%;
 }
-
-#log-in {
-    width: 150px;
-    font-weight: 600;
+#main-image{
+ width: 100%;
+ height: 100%;
 }
-
-#join {
-    width: 70px;
-    font-weight: 600;
+img{
+ width: 30rem;
+ height: auto;
 }
-
-#form-control{
-    border-color: #F2BF1E;
+@media screen and (max-width: 1080px){
+ img{
+  width: 20rem;
+  height: auto;
+ }
+}
+@media screen and (max-width: 768px){
+ main{
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+ }
+ #main-content{
+  width: auto;
+  height: auto;
+ }
+ #main-image{
+  width: auto;
+ height:auto;
+ margin-bottom: 2rem;
+ }
 }

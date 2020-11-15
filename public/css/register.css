@@ -1,0 +1,29 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
+ background-color: #54C7EF;
+}
+
+.container{
+ display: flex;
+ justify-content: center;
+}
+
+.tabcontent{
+ width: 300px;
+}
+.navbar-brand{
+ font-weight: bold;
+ font-size: 2rem;
+}
+
+.card{
+ padding: 5rem;
+ border-radius: 3%;
+ margin-top: 5rem;
+ align-items: center;
+ width: 500px;
+}

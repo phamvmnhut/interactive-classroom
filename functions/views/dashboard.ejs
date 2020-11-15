@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/">SUTI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="mr-auto"></div>
+      <ul class="navbar-nav d-flex align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/join">For student</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#teacher">For teacher</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutus">About us</a>
+        </li>
+        <%if(uid){%>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard"><img id="userAvatar" src=<%=avatarUrl%> alt="Avatar"></a>
+        </li>
+        <% } %>
+
+      </ul>
+    </div>
+  </nav>
+  <main class="d-flex">
+    <div id="control-panel" class="mt-5 px-3">
+      <div class="userInfo d-flex justify-content-center align-items-center pb-3">
+        <img id="avatar" src=<%=avatarUrl%> alt="Avatar">
+        <h6 class="ml-1 pt-1"><%=name%></h6>
+      </div>
+      <div class="list-control d-flex flex-column">
+        <button class="list-item btn my-2 px-4 py-3"><i class="fas fa-list"></i> Your classrooms</button>
+        <a id="createClass" class="list-item btn my-2 px-4 py-3" href="/create"<i class="fas fa-plus-square"></i> Create new classroom</a>
+        <a id="logoutBtn" class="list-item btn my-2 px-4 py-3" href="/sessionLogout"><i
+              class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+    <div id="content">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div class="code text-center">CODE: F3H21T</div>
+          <h6 class="card-text text-center">REACT First Footprint</h6>
+        </div>
+        <img src="https://reactjs.org/logo-og.png" class="card-img-top" alt="React App">
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div class="code text-center">CODE: 25A6T</div>
+          <h6 class="card-text text-center">REACT First Footprint</h6>
+        </div>
+        <img src="https://jobsgo.vn/blog/wp-content/uploads/2020/07/C-696x392.jpg" class="card-img-top" alt="React App">
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div class="code text-center">CODE: KQ14R</div>
+          <h6 class="card-text text-center">REACT First Footprint</h6>
+        </div>
+        <img
+          src="https://lh3.googleusercontent.com/proxy/cwWC4xRy4IKuDq1BLjfIL5S3D_VzA0IZrwh0AakRoygtKUDEhiWM28D9uHzDwx4wUcZ_eFBo_BTSBv2oB5f1rtZdNZ-C_pcYWGwPTfNBtWig7LGfTk3Eau0X_T4p8G_l2EUyFKitNn-CYhPZX66hOoh6p0aEXTlZmLV--g"
+          class="card-img-top" alt="React App">
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div class="code text-center">CODE: JS08B</div>
+          <h6 class="card-text text-center">REACT First Footprint</h6>
+        </div>
+        <img
+          src="https://techvccloud.mediacdn.vn/zoom/650_406/2018/11/23/js-15429579443112042672363-crop-1542957949936317424252.png"
+          class="card-img-top" alt="React App">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
